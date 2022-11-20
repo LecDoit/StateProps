@@ -1,28 +1,31 @@
 import React , { Component}from "react" ;
 
 
-class InputField extends Component{
+
+//create new component and logic
+
+class OverviewList extends Component{
+    constructor(props){
+        super();
+
+    }
+
+
+
+
     render(){
-        return(
+
+      
+        return (
             <div>
-                <input></input>
+                <p>
+                    {this.props.tasksArr.map((items,i)=> <li key={i}> {items} </li>)}
+                </p>
+
             </div>
         )
     }
-}
-
-
-class SubButt extends Component{
-
-    render(){
-        return(
-        <div>
-           <button>Submit</button>
-        </div>
-        )
-    }
 
 }
 
-export{SubButt,InputField}
-  
+export default OverviewList
